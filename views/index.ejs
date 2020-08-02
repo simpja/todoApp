@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simpja Todo</title>
+  </head>
+  <body>
+    <form action="/todos" method="POST">
+      <input type="text" placeholder="name" name="name" />
+      <input type="text" placeholder="description" name="description" />
+      <input type="datetime-local" placeholder="due-date" name="due-date" />
+      <button type="submit">Submit</button>
+    </form>
+    <h2>And this is the pre-existing ones!</h2>
+    <ul class="todo">  
+        <% for(var i=0; i<todo.length; i++) {%>    
+            <li class="quote">      
+                <span><%= todo[i].name %></span>      
+                <span><%= todo[i].quote %></span>    
+            </li>  
+        <% } %>
+    </ul>
+  </body>
+</html>
